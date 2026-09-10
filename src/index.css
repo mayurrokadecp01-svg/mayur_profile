@@ -21,3 +21,18 @@
 ::-webkit-scrollbar {
   display: none;
 }
+
+@keyframes auto-scroll-y {
+  0% { transform: translateY(0); }
+  45% { transform: translateY(calc(-100% + 400px)); }
+  55% { transform: translateY(calc(-100% + 400px)); }
+  100% { transform: translateY(0); }
+}
+
+.animate-auto-scroll-y {
+  animation: auto-scroll-y 20s ease-in-out infinite;
+}
+
+.animate-auto-scroll-y:hover {
+  animation-play-state: paused;
+}
