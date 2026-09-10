@@ -15,8 +15,8 @@ const SelectedWork = () => {
         <div className="w-full bg-surface-container-lowest border border-surface-container-highest rounded-xl overflow-hidden mb-space-2xl hover:border-on-surface transition-all duration-200 group">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 items-stretch">
             <div className="lg:col-span-7 bg-surface-container-high p-space-lg lg:p-space-2xl flex items-center justify-center overflow-hidden">
-              <div className="w-full max-w-[340px] h-[400px] overflow-hidden rounded-2xl shadow-xl relative group-hover:shadow-2xl transition-shadow duration-300 bg-surface-container-lowest">
-                <img alt="Nexcart Enterprise Bulk Purchase mobile checkout interface" className="w-full h-auto object-cover absolute top-0 left-0 animate-auto-scroll-y" src="/nexcart.png" onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.parentElement!.innerHTML += '<div class="w-full h-full flex items-center justify-center text-tertiary font-label-mono-sm p-4 text-center">Please add nexcart.png to public folder</div>'; }}/>
+              <div className="w-full h-full flex items-center justify-center p-space-md">
+                <img alt="Nexcart Enterprise Bulk Purchase mobile checkout interface" className="w-full max-h-[500px] object-contain object-top drop-shadow-xl transform group-hover:scale-[1.02] transition-transform duration-500" src="/nexcart.png" onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.parentElement!.innerHTML += '<div class="w-full h-full flex items-center justify-center text-tertiary font-label-mono-sm p-4 text-center">Please add nexcart.png to public folder</div>'; }}/>
               </div>
             </div>
             <div className="lg:col-span-5 p-space-xl lg:p-space-2xl flex flex-col justify-between">
@@ -81,8 +81,8 @@ const SelectedWork = () => {
               </div>
             </div>
             <div className="lg:col-span-7 bg-surface-container-high p-space-lg lg:p-space-2xl flex items-center justify-center overflow-hidden order-1 lg:order-2">
-              <div className="w-full max-w-[340px] h-[400px] overflow-hidden rounded-2xl shadow-xl relative group-hover:shadow-2xl transition-shadow duration-300 bg-surface-container-lowest">
-                <img alt="Kahramaa Arabic utility telemetry app" className="w-full h-auto object-cover absolute top-0 left-0 animate-auto-scroll-y" style={{ animationDelay: '-5s' }} src="/kahramaa.png" onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.parentElement!.innerHTML += '<div class="w-full h-full flex items-center justify-center text-tertiary font-label-mono-sm p-4 text-center">Please add kahramaa.png to public folder</div>'; }}/>
+              <div className="w-full h-full flex items-center justify-center p-space-md">
+                <img alt="Kahramaa Arabic utility telemetry app" className="w-full max-h-[500px] object-contain object-top drop-shadow-xl transform group-hover:scale-[1.02] transition-transform duration-500" src="/kahramaa.png" onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.parentElement!.innerHTML += '<div class="w-full h-full flex items-center justify-center text-tertiary font-label-mono-sm p-4 text-center">Please add kahramaa.png to public folder</div>'; }}/>
               </div>
             </div>
           </div>
@@ -92,8 +92,8 @@ const SelectedWork = () => {
         <div className="w-full bg-surface-container-lowest border border-surface-container-highest rounded-xl overflow-hidden mb-space-2xl hover:border-on-surface transition-all duration-200 group">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 items-stretch">
             <div className="lg:col-span-7 bg-surface-container-high p-space-lg lg:p-space-2xl flex items-center justify-center overflow-hidden">
-              <div className="w-full max-w-[340px] h-[400px] overflow-hidden rounded-2xl shadow-xl relative group-hover:shadow-2xl transition-shadow duration-300 bg-surface-container-lowest">
-                <img alt="DocTime Log patient vitals tracking interface" className="w-full h-auto object-cover absolute top-0 left-0 animate-auto-scroll-y" style={{ animationDelay: '-10s' }} src="/doctime.png" onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.parentElement!.innerHTML += '<div class="w-full h-full flex items-center justify-center text-tertiary font-label-mono-sm p-4 text-center">Please add doctime.png to public folder</div>'; }}/>
+              <div className="w-full h-full flex items-center justify-center p-space-md">
+                <img alt="DocTime Log patient vitals tracking interface" className="w-full max-h-[500px] object-contain object-top drop-shadow-xl transform group-hover:scale-[1.02] transition-transform duration-500" src="/doctime.png" onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.parentElement!.innerHTML += '<div class="w-full h-full flex items-center justify-center text-tertiary font-label-mono-sm p-4 text-center">Please add doctime.png to public folder</div>'; }}/>
               </div>
             </div>
             <div className="lg:col-span-5 p-space-xl lg:p-space-2xl flex flex-col justify-between">
