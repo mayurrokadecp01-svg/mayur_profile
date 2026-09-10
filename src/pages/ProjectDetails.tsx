@@ -36,6 +36,11 @@ const ProjectDetails = () => {
         
         if (fetchError) throw fetchError;
         setProject(data as any);
+        
+        // Dynamic SEO Title
+        if (data) {
+          document.title = `${(data as any).name} — Mayur Rokade`;
+        }
 
         if (data) {
           // Fetch images

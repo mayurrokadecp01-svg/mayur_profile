@@ -1,5 +1,9 @@
 import React from 'react';
 
+const supabaseStorageUrl = import.meta.env.VITE_SUPABASE_URL 
+  ? `${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/resumes` 
+  : '';
+
 const ResumeProfiles = () => {
   return (
     <section className="w-full py-space-3xl px-gutter" id="resume">
@@ -17,9 +21,9 @@ const ResumeProfiles = () => {
               <h3 className="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-2xs">ANDROID FOCUSED</h3>
               <p className="font-body-sm text-body-sm text-secondary">In-depth breakdown of native Android architecture, Compose pipelines, and performance audits.</p>
             </div>
-            <a className="inline-flex items-center justify-between px-space-md py-space-xs rounded bg-surface-container text-on-surface font-label-mono-sm text-label-mono-sm hover:bg-on-surface hover:text-on-primary transition-colors" download href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-              <span>Download PDF</span>
-              <span className="material-symbols-outlined text-[16px]">download</span>
+            <a className="inline-flex items-center justify-between px-space-md py-space-xs rounded bg-surface-container text-on-surface font-label-mono-sm text-label-mono-sm hover:bg-on-surface hover:text-on-primary transition-colors" href={`${supabaseStorageUrl}/android-resume.pdf`} target="_blank" rel="noopener noreferrer">
+              <span>View PDF</span>
+              <span className="material-symbols-outlined text-[16px]">open_in_new</span>
             </a>
           </div>
           {/* Resume 2 */}
@@ -29,9 +33,9 @@ const ResumeProfiles = () => {
               <h3 className="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-2xs">iOS FOCUSED</h3>
               <p className="font-body-sm text-body-sm text-secondary">Swift & SwiftUI implementation track record, Combine architectures, and CoreData sync engines.</p>
             </div>
-            <a className="inline-flex items-center justify-between px-space-md py-space-xs rounded bg-surface-container text-on-surface font-label-mono-sm text-label-mono-sm hover:bg-on-surface hover:text-on-primary transition-colors" download href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-              <span>Download PDF</span>
-              <span className="material-symbols-outlined text-[16px]">download</span>
+            <a className="inline-flex items-center justify-between px-space-md py-space-xs rounded bg-surface-container text-on-surface font-label-mono-sm text-label-mono-sm hover:bg-on-surface hover:text-on-primary transition-colors" href={`${supabaseStorageUrl}/ios-resume.pdf`} target="_blank" rel="noopener noreferrer">
+              <span>View PDF</span>
+              <span className="material-symbols-outlined text-[16px]">open_in_new</span>
             </a>
           </div>
           {/* Resume 3 */}
@@ -41,9 +45,9 @@ const ResumeProfiles = () => {
               <h3 className="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-2xs">MOBILE TECHNICAL LEAD</h3>
               <p className="font-body-sm text-body-sm text-secondary">Comprehensive multi-platform leadership, technical roadmapping, and staff management profile.</p>
             </div>
-            <a className="inline-flex items-center justify-between px-space-md py-space-xs rounded bg-surface-container text-on-surface font-label-mono-sm text-label-mono-sm hover:bg-on-surface hover:text-on-primary transition-colors" download href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-              <span>Download PDF</span>
-              <span className="material-symbols-outlined text-[16px]">download</span>
+            <a className="inline-flex items-center justify-between px-space-md py-space-xs rounded bg-surface-container text-on-surface font-label-mono-sm text-label-mono-sm hover:bg-on-surface hover:text-on-primary transition-colors" href={`${supabaseStorageUrl}/lead-resume.pdf`} target="_blank" rel="noopener noreferrer">
+              <span>View PDF</span>
+              <span className="material-symbols-outlined text-[16px]">open_in_new</span>
             </a>
           </div>
         </div>
