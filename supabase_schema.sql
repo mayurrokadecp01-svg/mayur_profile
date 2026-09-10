@@ -152,6 +152,7 @@ CREATE POLICY "Public site settings are viewable by everyone." ON site_settings 
 
 -- PUBLIC INSERT ACCESS (Allow anyone to submit contact messages)
 CREATE POLICY "Anyone can insert a contact message." ON contact_messages FOR INSERT WITH CHECK (true);
+GRANT INSERT ON public.contact_messages TO anon;
 
 -- ADMIN ACCESS (Allow authenticated admin to perform all CRUD operations)
 -- Assuming admin uses Supabase Auth. auth.uid() ensures the user is logged in.

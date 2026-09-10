@@ -28,7 +28,7 @@ const Hero = () => {
           <a href="#work" className="inline-flex items-center justify-center rounded-lg font-headline-sm text-headline-sm transition-colors duration-150 px-space-lg py-space-sm bg-primary-container text-on-primary hover:bg-primary">
             View Selected Work
           </a>
-          <a href="#resume" className="inline-flex items-center justify-center rounded-lg font-headline-sm text-headline-sm transition-colors duration-150 px-space-lg py-space-sm bg-surface-container-lowest text-on-surface border border-surface-container-highest hover:border-on-surface">
+          <a className="inline-flex items-center justify-center px-space-lg py-space-sm bg-surface-container-lowest text-on-surface border border-surface-container-highest font-headline-sm text-headline-sm rounded-lg hover:border-on-surface transition-colors duration-150" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
             Download Resume
           </a>
         </div>

@@ -17,7 +17,7 @@ const ResumeProfiles = () => {
               <h3 className="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-2xs">ANDROID FOCUSED</h3>
               <p className="font-body-sm text-body-sm text-secondary">In-depth breakdown of native Android architecture, Compose pipelines, and performance audits.</p>
             </div>
-            <a className="inline-flex items-center justify-between px-space-md py-space-xs rounded bg-surface-container text-on-surface font-label-mono-sm text-label-mono-sm hover:bg-on-surface hover:text-on-primary transition-colors" download href="#">
+            <a className="inline-flex items-center justify-between px-space-md py-space-xs rounded bg-surface-container text-on-surface font-label-mono-sm text-label-mono-sm hover:bg-on-surface hover:text-on-primary transition-colors" download href="/resume.pdf" target="_blank" rel="noopener noreferrer">
               <span>Download PDF</span>
               <span className="material-symbols-outlined text-[16px]">download</span>
             </a>
@@ -29,7 +29,7 @@ const ResumeProfiles = () => {
               <h3 className="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-2xs">iOS FOCUSED</h3>
               <p className="font-body-sm text-body-sm text-secondary">Swift & SwiftUI implementation track record, Combine architectures, and CoreData sync engines.</p>
             </div>
-            <a className="inline-flex items-center justify-between px-space-md py-space-xs rounded bg-surface-container text-on-surface font-label-mono-sm text-label-mono-sm hover:bg-on-surface hover:text-on-primary transition-colors" download href="#">
+            <a className="inline-flex items-center justify-between px-space-md py-space-xs rounded bg-surface-container text-on-surface font-label-mono-sm text-label-mono-sm hover:bg-on-surface hover:text-on-primary transition-colors" download href="/resume.pdf" target="_blank" rel="noopener noreferrer">
               <span>Download PDF</span>
               <span className="material-symbols-outlined text-[16px]">download</span>
             </a>
@@ -41,7 +41,7 @@ const ResumeProfiles = () => {
               <h3 className="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-2xs">MOBILE TECHNICAL LEAD</h3>
               <p className="font-body-sm text-body-sm text-secondary">Comprehensive multi-platform leadership, technical roadmapping, and staff management profile.</p>
             </div>
-            <a className="inline-flex items-center justify-between px-space-md py-space-xs rounded bg-surface-container text-on-surface font-label-mono-sm text-label-mono-sm hover:bg-on-surface hover:text-on-primary transition-colors" download href="#">
+            <a className="inline-flex items-center justify-between px-space-md py-space-xs rounded bg-surface-container text-on-surface font-label-mono-sm text-label-mono-sm hover:bg-on-surface hover:text-on-primary transition-colors" download href="/resume.pdf" target="_blank" rel="noopener noreferrer">
               <span>Download PDF</span>
               <span className="material-symbols-outlined text-[16px]">download</span>
             </a>
