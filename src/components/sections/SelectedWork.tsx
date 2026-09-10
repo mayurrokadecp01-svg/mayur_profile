@@ -15,8 +15,8 @@ const SelectedWork = () => {
         <div className="w-full bg-surface-container-lowest border border-surface-container-highest rounded-xl overflow-hidden mb-space-2xl hover:border-on-surface transition-all duration-200 group">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 items-stretch">
             <div className="lg:col-span-7 bg-surface-container-high p-space-lg lg:p-space-2xl flex items-center justify-center overflow-hidden">
-              <div className="w-full max-w-[340px] h-[400px] overflow-hidden rounded-2xl shadow-xl relative group-hover:shadow-2xl transition-shadow duration-300">
-                <img alt="Nexcart Enterprise Bulk Purchase mobile checkout interface" className="w-full h-auto object-cover absolute top-0 left-0 animate-auto-scroll-y" src="https://lh3.googleusercontent.com/aida/AEtjO1XIpg5456v52Ne2lDR8PpT_14oAVnzluLHbYecR6YW6It5z9uA5qeDEyYwSO5h5G3gEG8YmQe_WvVhFCvHADVVe5lfpdvaxU7i6RDjWU2Exoz_StltjgVp7ZxORY-kd-fEldjkCDkTYmb5nx6vjGDWxMJRHnJEI8tum0w7VbsSudt_WqcwiJbWZqyQ_ShWDyHdg_BlHQ677mKxW3EA8eGVh7YRkTdx_eOxp78vttMnEovnTIsbs-zxm2XQ"/>
+              <div className="w-full max-w-[340px] h-[400px] overflow-hidden rounded-2xl shadow-xl relative group-hover:shadow-2xl transition-shadow duration-300 bg-surface-container-lowest">
+                <img alt="Nexcart Enterprise Bulk Purchase mobile checkout interface" className="w-full h-auto object-cover absolute top-0 left-0 animate-auto-scroll-y" src="/nexcart.png" onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.parentElement!.innerHTML += '<div class="w-full h-full flex items-center justify-center text-tertiary font-label-mono-sm p-4 text-center">Please add nexcart.png to public folder</div>'; }}/>
               </div>
             </div>
             <div className="lg:col-span-5 p-space-xl lg:p-space-2xl flex flex-col justify-between">
@@ -81,8 +81,8 @@ const SelectedWork = () => {
               </div>
             </div>
             <div className="lg:col-span-7 bg-surface-container-high p-space-lg lg:p-space-2xl flex items-center justify-center overflow-hidden order-1 lg:order-2">
-              <div className="w-full max-w-[340px] h-[400px] overflow-hidden rounded-2xl shadow-xl relative group-hover:shadow-2xl transition-shadow duration-300">
-                <img alt="Kahramaa Arabic utility telemetry app" className="w-full h-auto object-cover absolute top-0 left-0 animate-auto-scroll-y" style={{ animationDelay: '-5s' }} src="https://lh3.googleusercontent.com/aida/AEtjO1UkVuJcNLsR9_zf8fuyEtHVfM1mprYfOlaiRrV7ObJybED8S2RhZo18vS7nvrHAcZBAGY4vgenp_sHHK3ChQkJtHPb9qQdhkuMEqCbY57P9A0xhWQ1Lpcr5z9qSz4nszI0lIP5BAQKrBc7dyZ_aP_LXZbAhmd34vuVM0l2HUuGPpsHo_8rEoxgtivaO3P34i0p-D8d0gA8kfTXMn7SmmzxbWFN6Wdx2qwMFlyPX1N6QNDamtGAopEYe0A"/>
+              <div className="w-full max-w-[340px] h-[400px] overflow-hidden rounded-2xl shadow-xl relative group-hover:shadow-2xl transition-shadow duration-300 bg-surface-container-lowest">
+                <img alt="Kahramaa Arabic utility telemetry app" className="w-full h-auto object-cover absolute top-0 left-0 animate-auto-scroll-y" style={{ animationDelay: '-5s' }} src="/kahramaa.png" onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.parentElement!.innerHTML += '<div class="w-full h-full flex items-center justify-center text-tertiary font-label-mono-sm p-4 text-center">Please add kahramaa.png to public folder</div>'; }}/>
               </div>
             </div>
           </div>
@@ -92,8 +92,8 @@ const SelectedWork = () => {
         <div className="w-full bg-surface-container-lowest border border-surface-container-highest rounded-xl overflow-hidden mb-space-2xl hover:border-on-surface transition-all duration-200 group">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 items-stretch">
             <div className="lg:col-span-7 bg-surface-container-high p-space-lg lg:p-space-2xl flex items-center justify-center overflow-hidden">
-              <div className="w-full max-w-[340px] h-[400px] overflow-hidden rounded-2xl shadow-xl relative group-hover:shadow-2xl transition-shadow duration-300">
-                <img alt="DocTime Log patient vitals tracking interface" className="w-full h-auto object-cover absolute top-0 left-0 animate-auto-scroll-y" style={{ animationDelay: '-10s' }} src="https://lh3.googleusercontent.com/aida/AEtjO1WjqDyMOksHTAouOgTXj7AQKH6Ezdfw4RSdnW3FFcyYlpiWeEMH53RWFL5OTT2upL0SXovW__5XP7sKeZErlUpJ7PO0xRDDuyp36plmN5N9HO9o7RTDYj3Qdf9dh_LqDU2I_kPRgU3euce82uEI7QQMBeYibJu8gjYAg1sqQs5AaTCimjAfsLHob7q42L4joPu7MXENhPhKw9DbO_Ng8Tt2pqRv-mkRM_-Q4iQrNR6WrGj1yIsbdC8HmhA"/>
+              <div className="w-full max-w-[340px] h-[400px] overflow-hidden rounded-2xl shadow-xl relative group-hover:shadow-2xl transition-shadow duration-300 bg-surface-container-lowest">
+                <img alt="DocTime Log patient vitals tracking interface" className="w-full h-auto object-cover absolute top-0 left-0 animate-auto-scroll-y" style={{ animationDelay: '-10s' }} src="/doctime.png" onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.parentElement!.innerHTML += '<div class="w-full h-full flex items-center justify-center text-tertiary font-label-mono-sm p-4 text-center">Please add doctime.png to public folder</div>'; }}/>
               </div>
             </div>
             <div className="lg:col-span-5 p-space-xl lg:p-space-2xl flex flex-col justify-between">
