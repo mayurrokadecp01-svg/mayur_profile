@@ -100,15 +100,97 @@ ON CONFLICT (slug) DO UPDATE SET
   features = EXCLUDED.features,
   image_url = EXCLUDED.image_url;
 
--- Seed More Products (These can just be simple entries)
-INSERT INTO projects (name, slug, category, platform, short_description)
+-- Seed More Products (Detailed Entries for Case Studies)
+INSERT INTO projects (name, slug, category, role, short_description, full_description, platform, technologies, architecture, responsibilities, features)
 VALUES
-('My Safe Pune', 'my-safe-pune', 'Civic Safety', 'Android / iOS', 'Civic safety and emergency assistance application for citizens.'),
-('Zylem', 'zylem', 'Enterprise Operations', 'Android', 'Enterprise operations and asset logging application.'),
-('Farmers Basket', 'farmers-basket', 'Agri-Commerce', 'Android', 'Agri-commerce and fresh produce supply chain application.'),
-('Baav', 'baav', 'Local Marketplace', 'Mobile', 'Localized marketplace and merchant listings platform.'),
-('NexMoney', 'nexmoney', 'Fintech & Payments', 'Android / iOS', 'Digital wallet and multi-utility payment application.'),
-('NexShopping', 'nexshopping', 'Consumer E-Commerce', 'Android', 'Consumer e-commerce and shopping experience mobile app.'),
-('NexMoney Merchant', 'nexmoney-merchant', 'Merchant Retail', 'Android', 'Retailer QR code and transaction management interface.'),
-('Lisungui', 'lisungui', 'Community Health', 'Mobile', 'Community healthcare and referral management workflow.')
-ON CONFLICT (slug) DO NOTHING;
+(
+  'My Safe Pune', 'my-safe-pune', 'Civic Safety', 'Senior Mobile Engineer', 
+  'Civic safety and emergency assistance application for citizens.',
+  'My Safe Pune is a critical civic application designed to connect citizens with emergency services rapidly. It provides instant SOS features, real-time location broadcasting, and a directory of essential municipal contacts.',
+  'Android & iOS',
+  ARRAY['Kotlin', 'Swift', 'Firebase', 'Google Maps API'],
+  'Utilizes a cloud-native backend with real-time database listeners to ensure emergency alerts are dispatched instantly. The mobile client focuses on high availability and offline resilience.',
+  ARRAY['Implemented the SOS broadcast logic', 'Integrated real-time mapping for responder tracking', 'Optimized battery usage for background location services'],
+  ARRAY['SOS Alerts', 'Real-time Location', 'Emergency Contacts', 'Incident Reporting']
+),
+(
+  'Zylem', 'zylem', 'Enterprise Operations', 'Mobile Developer', 
+  'Enterprise operations and asset logging application.',
+  'Zylem serves as a robust asset management and logging tool for enterprise operations, allowing field workers to document equipment status, track maintenance schedules, and generate reports on the go.',
+  'Android',
+  ARRAY['Java', 'Android SDK', 'SQLite', 'REST APIs'],
+  'The app relies on an offline-first architecture using SQLite, synchronizing data with the central enterprise ERP system once a stable connection is established.',
+  ARRAY['Designed the offline data synchronization engine', 'Built dynamic forms for asset logging', 'Ensured secure data transmission over corporate VPNs'],
+  ARRAY['Asset Tracking', 'Offline Logging', 'Dynamic Forms', 'ERP Sync']
+),
+(
+  'Farmers Basket', 'farmers-basket', 'Agri-Commerce', 'Mobile Developer', 
+  'Agri-commerce and fresh produce supply chain application.',
+  'Farmers Basket bridges the gap between local farmers and urban consumers. The application manages the entire lifecycle from farm inventory listing to consumer checkout and delivery tracking.',
+  'Android',
+  ARRAY['Java', 'Android SDK', 'Retrofit', 'Firebase Cloud Messaging'],
+  'Features a dual-sided marketplace architecture, optimized for low-bandwidth environments typically found in rural farming communities.',
+  ARRAY['Developed the inventory management module for farmers', 'Integrated push notifications for order updates', 'Optimized image loading for low-end devices'],
+  ARRAY['Marketplace', 'Order Tracking', 'Inventory Management', 'Push Notifications']
+),
+(
+  'Baav', 'baav', 'Local Marketplace', 'Mobile Developer', 
+  'Localized marketplace and merchant listings platform.',
+  'Baav is a localized merchant discovery and marketplace platform. It enables local businesses to list their services and products, while allowing consumers to browse, review, and contact vendors.',
+  'Mobile',
+  ARRAY['React Native', 'Redux', 'Node.js'],
+  'Built as a cross-platform solution to quickly capture market share, utilizing Redux for state management and a Node.js backend for rapid API development.',
+  ARRAY['Led the transition to React Native for cross-platform delivery', 'Implemented the search and filtering engine', 'Built the user review and rating system'],
+  ARRAY['Business Listings', 'Search & Discovery', 'Reviews', 'User Profiles']
+),
+(
+  'NexMoney', 'nexmoney', 'Fintech & Payments', 'Senior Mobile Engineer', 
+  'Digital wallet and multi-utility payment application.',
+  'NexMoney is a comprehensive digital wallet solution enabling peer-to-peer transfers, utility bill payments, and secure digital transactions with banking-grade security protocols.',
+  'Android & iOS',
+  ARRAY['Kotlin', 'Swift', 'Biometrics API', 'Encryption'],
+  'Employs a highly secure architecture with end-to-end encryption, utilizing hardware-backed keystores for biometric authentication and tokenized payment processing.',
+  ARRAY['Integrated biometric authentication pipelines', 'Ensured PCI-DSS compliance on the mobile client', 'Developed the peer-to-peer transfer UI'],
+  ARRAY['Digital Wallet', 'P2P Transfers', 'Bill Payments', 'Biometric Security']
+),
+(
+  'NexShopping', 'nexshopping', 'Consumer E-Commerce', 'Senior Mobile Engineer', 
+  'Consumer e-commerce and shopping experience mobile app.',
+  'A high-conversion consumer shopping application featuring personalized recommendations, streamlined checkout, and loyalty program integration.',
+  'Android',
+  ARRAY['Kotlin', 'MVVM', 'Coroutines', 'Room Database'],
+  'Utilizes a modern Android tech stack (MVVM, Coroutines, Room) to provide a fluid, lag-free shopping experience with robust local caching of product catalogs.',
+  ARRAY['Architected the MVVM presentation layer', 'Implemented advanced search with auto-suggest', 'Built the loyalty rewards tracking UI'],
+  ARRAY['Product Catalog', 'Smart Search', 'Cart & Checkout', 'Loyalty Program']
+),
+(
+  'NexMoney Merchant', 'nexmoney-merchant', 'Merchant Retail', 'Senior Mobile Engineer', 
+  'Retailer QR code and transaction management interface.',
+  'The merchant companion to NexMoney, allowing retailers to accept payments via dynamic QR codes, track daily settlements, and manage refunds directly from their mobile devices.',
+  'Android',
+  ARRAY['Kotlin', 'CameraX', 'WebSockets'],
+  'Designed for rapid transaction processing at the point of sale, utilizing WebSockets for instant payment confirmations and CameraX for reliable QR code scanning.',
+  ARRAY['Integrated CameraX for high-speed QR scanning', 'Implemented WebSocket listeners for real-time payment success', 'Built the daily settlement dashboard'],
+  ARRAY['QR Payments', 'Real-time Confirmations', 'Settlement Dashboard', 'Refund Management']
+),
+(
+  'Lisungui', 'lisungui', 'Community Health', 'Technical Lead', 
+  'Community healthcare and referral management workflow.',
+  'Lisungui is a specialized healthcare application designed to manage patient referrals between community health workers and specialized clinics, ensuring continuity of care.',
+  'Mobile',
+  ARRAY['React Native', 'TypeScript', 'GraphQL'],
+  'Leverages a cross-platform architecture with strict type safety (TypeScript) and GraphQL to handle complex, nested patient healthcare records efficiently.',
+  ARRAY['Architected the cross-platform codebase', 'Designed the secure patient data transfer protocol', 'Implemented offline forms for remote health workers'],
+  ARRAY['Patient Referrals', 'Health Records', 'Offline Forms', 'Care Tracking']
+)
+ON CONFLICT (slug) DO UPDATE SET 
+  name = EXCLUDED.name,
+  category = EXCLUDED.category,
+  role = EXCLUDED.role,
+  short_description = EXCLUDED.short_description,
+  full_description = EXCLUDED.full_description,
+  platform = EXCLUDED.platform,
+  technologies = EXCLUDED.technologies,
+  architecture = EXCLUDED.architecture,
+  responsibilities = EXCLUDED.responsibilities,
+  features = EXCLUDED.features;

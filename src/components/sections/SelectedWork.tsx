@@ -43,7 +43,7 @@ const SelectedWork = () => {
                 </div>
               </div>
               <div>
-                <Link to="/work/nexcart" className="inline-flex items-center gap-space-xs text-primary font-headline-sm text-headline-sm hover:translate-x-1 transition-transform group-hover:underline">
+                <Link to="/work/nexcart" className="inline-flex items-center gap-space-xs text-primary font-headline-sm text-headline-sm hover:translate-x-1 transition-transform">
                   <span>View Case Study</span>
                   <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
                 </Link>
@@ -74,7 +74,7 @@ const SelectedWork = () => {
                 </div>
               </div>
               <div>
-                <Link to="/work/kahramaa" className="inline-flex items-center gap-space-xs text-primary font-headline-sm text-headline-sm hover:translate-x-1 transition-transform group-hover:underline">
+                <Link to="/work/kahramaa" className="inline-flex items-center gap-space-xs text-primary font-headline-sm text-headline-sm hover:translate-x-1 transition-transform">
                   <span>View Case Study</span>
                   <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
                 </Link>
@@ -113,7 +113,7 @@ const SelectedWork = () => {
                 </div>
               </div>
               <div>
-                <Link to="/work/doctime-log" className="inline-flex items-center gap-space-xs text-primary font-headline-sm text-headline-sm hover:translate-x-1 transition-transform group-hover:underline">
+                <Link to="/work/doctime-log" className="inline-flex items-center gap-space-xs text-primary font-headline-sm text-headline-sm hover:translate-x-1 transition-transform">
                   <span>View Case Study</span>
                   <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
                 </Link>
