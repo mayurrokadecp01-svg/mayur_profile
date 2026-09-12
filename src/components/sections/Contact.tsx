@@ -3,7 +3,7 @@ import { supabase } from '../../lib/supabase';
 import { Button } from '../ui/Button';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', mobile: '', subject: '', message: '' });
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -11,11 +11,16 @@ const Contact = () => {
     setStatus('submitting');
     
     try {
-      // 1. Save to Supabase database
+      // 1. Save to Supabase database (excluding mobile for now to avoid schema errors)
       const { error } = await supabase
         .from('contact_messages')
         // @ts-ignore
-        .insert([formData]);
+        .insert([{
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message
+        }]);
         
       if (error) throw error;
 
@@ -33,6 +38,7 @@ const Contact = () => {
               access_key: web3formsKey,
               name: formData.name,
               email: formData.email,
+              phone: formData.mobile,
               subject: `New Portfolio Message: ${formData.subject}`,
               message: formData.message,
               from_name: 'Portfolio Contact Form',
@@ -45,7 +51,7 @@ const Contact = () => {
       }
       
       setStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
+      setFormData({ name: '', email: '', mobile: '', subject: '', message: '' });
     } catch (err) {
       console.error(err);
       setStatus('error');
@@ -91,17 +97,30 @@ const Contact = () => {
                   />
                 </div>
               </div>
-              <div>
-                <label htmlFor="subject" className="font-label-mono-sm text-label-mono-sm text-tertiary uppercase block mb-1">Subject</label>
-                <input 
-                  id="subject"
-                  type="text" 
-                  required
-                  className="w-full px-space-md py-space-xs rounded-lg bg-surface-container-lowest border border-surface-container-highest text-on-surface font-body-sm focus:outline-none focus:border-primary transition-colors"
-                  placeholder="Project Inquiry / Advisory"
-                  value={formData.subject}
-                  onChange={e => setFormData({...formData, subject: e.target.value})}
-                />
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+                <div>
+                  <label htmlFor="mobile" className="font-label-mono-sm text-label-mono-sm text-tertiary uppercase block mb-1">Mobile (Optional)</label>
+                  <input 
+                    id="mobile"
+                    type="tel" 
+                    className="w-full px-space-md py-space-xs rounded-lg bg-surface-container-lowest border border-surface-container-highest text-on-surface font-body-sm focus:outline-none focus:border-primary transition-colors"
+                    placeholder="+1 234 567 8900"
+                    value={formData.mobile}
+                    onChange={e => setFormData({...formData, mobile: e.target.value})}
+                  />
+                </div>
+                <div>
+                  <label htmlFor="subject" className="font-label-mono-sm text-label-mono-sm text-tertiary uppercase block mb-1">Subject</label>
+                  <input 
+                    id="subject"
+                    type="text" 
+                    required
+                    className="w-full px-space-md py-space-xs rounded-lg bg-surface-container-lowest border border-surface-container-highest text-on-surface font-body-sm focus:outline-none focus:border-primary transition-colors"
+                    placeholder="Project Inquiry / Advisory"
+                    value={formData.subject}
+                    onChange={e => setFormData({...formData, subject: e.target.value})}
+                  />
+                </div>
               </div>
               <div>
                 <label htmlFor="message" className="font-label-mono-sm text-label-mono-sm text-tertiary uppercase block mb-1">Message</label>
@@ -117,7 +136,7 @@ const Contact = () => {
               </div>
               
               <div className="pt-space-sm flex items-center justify-between">
-                <Button type="submit" disabled={status === 'submitting'} className={status === 'submitting' ? 'opacity-75 cursor-not-allowed px-space-xl py-space-sm bg-primary-container text-on-primary font-headline-sm text-headline-sm rounded-lg hover:bg-primary transition-colors' : 'px-space-xl py-space-sm bg-primary-container text-on-primary font-headline-sm text-headline-sm rounded-lg hover:bg-primary transition-colors'}>
+                <Button type="submit" disabled={status === 'submitting'} className={status === 'submitting' ? 'opacity-75 cursor-not-allowed px-space-xl py-space-sm bg-primary-container text-white font-headline-sm text-headline-sm rounded-lg hover:bg-primary transition-colors' : 'px-space-xl py-space-sm bg-primary-container text-white font-headline-sm text-headline-sm rounded-lg hover:bg-primary transition-colors'}>
                   {status === 'submitting' ? 'Sending...' : 'Send Message'}
                 </Button>
                 
