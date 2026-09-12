@@ -11,12 +11,39 @@ const Contact = () => {
     setStatus('submitting');
     
     try {
+      // 1. Save to Supabase database
       const { error } = await supabase
         .from('contact_messages')
         // @ts-ignore
         .insert([formData]);
         
       if (error) throw error;
+
+      // 2. Send Email Notification via Web3Forms
+      const web3formsKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+      if (web3formsKey) {
+        try {
+          await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+              access_key: web3formsKey,
+              name: formData.name,
+              email: formData.email,
+              subject: `New Portfolio Message: ${formData.subject}`,
+              message: formData.message,
+              from_name: 'Portfolio Contact Form',
+              replyto: formData.email
+            })
+          });
+        } catch (emailErr) {
+          console.error("Email notification failed, but message was saved to database", emailErr);
+        }
+      }
+      
       setStatus('success');
       setFormData({ name: '', email: '', subject: '', message: '' });
     } catch (err) {
