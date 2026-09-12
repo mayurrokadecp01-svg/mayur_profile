@@ -136,7 +136,7 @@ const Contact = () => {
               </div>
               
               <div className="pt-space-sm flex items-center justify-between">
-                <Button type="submit" disabled={status === 'submitting'} className={status === 'submitting' ? 'opacity-75 cursor-not-allowed px-space-xl py-space-sm bg-primary-container text-white font-headline-sm text-headline-sm rounded-lg hover:bg-primary transition-colors' : 'px-space-xl py-space-sm bg-primary-container text-white font-headline-sm text-headline-sm rounded-lg hover:bg-primary transition-colors'}>
+                <Button type="submit" disabled={status === 'submitting'} className={status === 'submitting' ? 'opacity-75 cursor-not-allowed px-space-xl py-space-sm bg-primary-container !text-white font-headline-sm text-headline-sm rounded-lg hover:bg-primary transition-colors' : 'px-space-xl py-space-sm bg-primary-container !text-white font-headline-sm text-headline-sm rounded-lg hover:bg-primary transition-colors'}>
                   {status === 'submitting' ? 'Sending...' : 'Send Message'}
                 </Button>
                 
